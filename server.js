@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
 const Jimp = require('jimp');
+require('dotenv').config();
 
 let posDict = { //store the current position of every piece
   "A1": "rook-w",
@@ -279,6 +280,7 @@ client.on('message', message => {
 
 
 
-const token = "Nzg4NDMyMjg3NDA1OTY1MzM0.X9jayQ.1S4AZjc47DX6m3A0WhiavjJEgmI"
+const token = process.env.TOKEN;
+
 
 client.login(token)
